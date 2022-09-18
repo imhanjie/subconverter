@@ -104,14 +104,14 @@ STATE,AUTO
 {% if request.target == "quanx" %}
 
 [general]
-excluded_routes=192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
+excluded_routes=192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10
 geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://github.com/KOP-XIAO/QuantumultX/raw/master/Scripts/IP_API.js
 network_check_url=http://www.baidu.com/
 server_check_url=http://www.gstatic.com/generate_204
 
 [dns]
+server=180.76.76.76
 server=119.29.29.29
-server=223.5.5.5
 server=1.0.0.1
 server=8.8.8.8
 
