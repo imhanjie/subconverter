@@ -26,6 +26,12 @@ Rule: ~
 
 [General]
 loglevel = notify
+ipv6 = false
+ipv6-vif = disabled
+udp-priority = true
+allow-wifi-access = false
+proxy-test-url = http://baidu.com/
+internet-test-url = http://baidu.com/
 bypass-system = true
 skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
 #DNS设置或根据自己网络情况进行相应设置
@@ -33,6 +39,10 @@ bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
 dns-server = 119.29.29.29,223.5.5.5
 
 [Script]
+ipv6-dns-query = type=dns,script-path=https://raw.githubusercontent.com/imhanjie/public/master/subconverter/scripts/ipv6-dns-query.js,script-update-interval=0
+
+[Host]
+shvsix.imhanjie.com = script:ipv6-dns-query
 
 {% endif %}
 {% if request.target == "loon" %}
