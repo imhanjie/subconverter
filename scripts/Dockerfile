@@ -12,7 +12,8 @@ RUN apk add --no-cache --virtual .build-tools git g++ build-base linux-headers c
     git submodule update --init && \
     cmake -DCMAKE_BUILD_TYPE=Release . && \
     make quickjs -j $THREADS && \
-    install -m644 quickjs/libquickjs.a /usr/lib && \
+    install -d /usr/lib/quickjs/ && \
+    install -m644 quickjs/libquickjs.a /usr/lib/quickjs/ && \
     install -d /usr/include/quickjs/ && \
     install -m644 quickjs/quickjs.h quickjs/quickjs-libc.h /usr/include/quickjs/ && \
     install -m644 quickjspp.hpp /usr/include && \
@@ -30,7 +31,7 @@ RUN apk add --no-cache --virtual .build-tools git g++ build-base linux-headers c
     cd .. && \
     git clone https://github.com/ToruNiina/toml11 --depth=1 && \
     cd toml11 && \
-    cmake . && \
+    cmake -DCMAKE_CXX_STANDARD=11 . && \
     make install -j $THREADS && \
     cd .. && \
     git clone https://github.com/tindy2013/subconverter --depth=1 && \
