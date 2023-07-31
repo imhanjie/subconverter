@@ -1,0 +1,20 @@
+name: Sync server project
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          host: ${{ secrets.SSH_HOST }}
+          script: |
+            cd /root/sync-data/subconverter/ && git reset --hard && git pull
