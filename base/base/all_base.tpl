@@ -26,8 +26,6 @@ Rule: ~
 
 [General]
 loglevel = notify
-proxy-test-url = http://baidu.com/
-internet-test-url = http://baidu.com/
 ipv6 = false
 ipv6-vif = disabled
 udp-priority = true
