@@ -39,7 +39,7 @@ dns-server = 119.29.29.29,223.5.5.5
 ipv6-dns-query = type=dns,script-path=https://raw.githubusercontent.com/imhanjie/public/master/subconverter/scripts/ipv6-dns-query.js,script-update-interval=0
 
 [Host]
-shvsix2.imhanjie.com = script:ipv6-dns-query
+shvsix.imhanjie.com = script:ipv6-dns-query
 
 {% endif %}
 {% if request.target == "loon" %}
