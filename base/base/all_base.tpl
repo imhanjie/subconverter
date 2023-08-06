@@ -33,10 +33,6 @@ allow-wifi-access = false
 skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
 dns-server = 119.29.29.29,223.5.5.5
 
-[URL Rewrite]
-^https?://(www.)?g.cn https://www.google.com 302
-^https?://(www.)?google.cn https://www.google.com 302
-
 [Script]
 ipv6-dns-query = type=dns,script-path=https://raw.githubusercontent.com/imhanjie/public/master/subconverter/scripts/ipv6-dns-query.js,script-update-interval=0
 
