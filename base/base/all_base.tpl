@@ -6,7 +6,6 @@ allow-lan: {{ default(global.clash.allow_lan, "true") }}
 mode: Rule
 log-level: {{ default(global.clash.log_level, "info") }}
 external-controller: :9090
-keep-alive-interval: 1800
 {% if default(request.clash.dns, "") == "1" %}
 dns:
   enable: true
