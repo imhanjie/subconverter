@@ -116,13 +116,14 @@ excluded_routes=192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10
 geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://github.com/KOP-XIAO/QuantumultX/raw/master/Scripts/IP_API.js
 network_check_url=http://www.baidu.com/
 server_check_url=http://www.gstatic.com/generate_204
-#running_mode_trigger=filter, filter, P_Mol_5G:all_direct, P_Mol:all_direct, F:all_direct, F_24G:all_direct
+running_mode_trigger=filter, filter, P_Mol_5G:all_direct, P_Mol:all_direct
 
 [dns]
 #no-system
-server=223.5.5.5
-server=180.76.76.76
-server=119.29.29.29
+#no-ipv6
+#server=223.5.5.5
+#server=180.76.76.76
+#server=119.29.29.29
 
 [policy]
 static=♻️ 自动选择, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Auto.png
